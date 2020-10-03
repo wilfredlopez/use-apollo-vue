@@ -1,0 +1,42 @@
+{
+  "name": "use-apollo-vue",
+  "version": "1.0.1",
+  "description": "hooks for vue and apollo",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "lib/",
+    "esm/"
+  ],
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "gen:types": "tsc --noEmit",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "prebuild": "yarn clean",
+    "build": "yarn build:cjs && yarn build:es",
+    "postbuild": "yarn gen:types",
+    "clean": "rimraf lib esm",
+    "release": "semantic-release"
+  },
+  "keywords": [
+    "vue 3",
+    "apollo",
+    "graphql"
+  ],
+  "author": {
+    "name": "Wilfred Lopez",
+    "url": "https://wilfredlopez.net"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.3.0",
+    "vue": "3.0.0"
+  }
+}
