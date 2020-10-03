@@ -11,6 +11,7 @@
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "prepare": "yarn build",
     "gen:types": "tsc --noEmit",
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
